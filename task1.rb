@@ -3,7 +3,6 @@
 a = ARGV[0].to_s
 
 
-b = a.encode("UTF-8")
-b = b.gsub(/[ркнРКН]/, '')
+b = a.gsub(/[ркнРКН]/, '')
 
-puts b
+puts b.force_encoding("UTF-8")
